@@ -40,7 +40,6 @@ def get_driver(headless=True):
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     return driver
 
-
 # options = Options()
 # options.add_argument("--headless")  # Run in background
 # driver = webdriver.Chrome(options=options)
@@ -60,9 +59,6 @@ async def upload(ctx):
     driver.get("https://wuwaflex.com")
     # continue automation steps...
 
-
-
-
 # This is just a simulation
 # @bot.command()
 # async def upload(ctx, image_url: str):
@@ -74,24 +70,19 @@ async def upload(ctx):
 #     else:
 #         await ctx.send("❌ Failed to upload image.")
 
-# Run the bot
-# bot.run("YOUR_DISCORD_BOT_TOKEN") 
-
-# load_dotenv()
-# token = os.getenv("DISCORD_TOKEN")
-# bot.run(token)
-
 # Testing on how to make a simple function
 @bot.command()
 async def pingping(ctx):
     await ctx.send('Pong!')
 
+@client.event
 async def on_message(self, message):
     if message.content == '!hello':
         await message.channel.send('Hi there!')
 
 @bot.command()
-async def delete(ctx, limit: int = 100):
+# dlt stands for delete
+async def dlt(ctx, limit: int = 100):
     deleted = await ctx.channel.purge(limit=limit)
     await ctx.send(f'Deleted {len(deleted)} messages', delete_after=3)
 
