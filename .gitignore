@@ -1,2 +1,3 @@
 # Your discord token should not be shared
 .env
+/bot-env
