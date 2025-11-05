@@ -75,10 +75,10 @@ async def upload(ctx):
 async def pingping(ctx):
     await ctx.send('Pong!')
 
-@client.event
-async def on_message(self, message):
-    if message.content == '!hello':
-        await message.channel.send('Hi there!')
+# @client.event
+# async def on_message(self, message):
+#     if message.content == '!hello':
+#         await message.channel.send('Hi there!')
 
 @bot.command()
 # dlt stands for delete

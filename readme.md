@@ -15,3 +15,5 @@ maybe imma try making a discord bot to automate the process to use Wuwaflex webs
 and uploading wuwabot /create image using image link instead since we are using wuwabot through discord.
 
 But to do that honestly I'm kinda lost right now so maybe it might take some time.
+
+Useful source to learn using discord.py: [https://discordpy.readthedocs.io/en/stable/]
