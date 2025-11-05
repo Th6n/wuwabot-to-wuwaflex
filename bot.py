@@ -1,3 +1,4 @@
+from email.mime import message
 import discord
 from discord.ext import commands
 import os
@@ -16,10 +17,16 @@ intents.message_content = True
 # Create the bot object
 bot = commands.Bot(command_prefix="$", intents=intents)
 
+# Create the client object
+# client = discord.Client(intents=intents)
+
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
 
+# @client.event
+# async def on_ready():
+#     print(f"Logged in as {client.user}")
 
 def get_driver(headless=True):
     options = Options()
@@ -71,14 +78,16 @@ async def upload(ctx):
 #         await ctx.send("❌ Failed to upload image.")
 
 # Testing on how to make a simple function
+@bot.event
+async def on_message(message):
+    if message.content == '!hello':
+        await message.channel.send('Hi there!')
+    await bot.process_commands(message)
+
+
 @bot.command()
 async def pingping(ctx):
     await ctx.send('Pong!')
-
-# @client.event
-# async def on_message(self, message):
-#     if message.content == '!hello':
-#         await message.channel.send('Hi there!')
 
 @bot.command()
 # dlt stands for delete
@@ -88,4 +97,5 @@ async def dlt(ctx, limit: int = 100):
 
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
+# client.run(token)
 bot.run(token)

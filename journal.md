@@ -1,0 +1,17 @@
+First thing I got an idea of trying to automate WUWAFlex stats through discord bot from the official discord Wuwa bot.
+
+Halfway I kinda gave up a little bit since, I'm still stuck at the tutorial hell since I'm not really good at coding myself and somehow 
+kinda vibe code most of the time which make me kinda ashamed so I halt this project.
+
+If I do ever continuing this I might explain on how this feature will work by using discord bot.
+
+If any of you guys do find this little project interesting and don't mind to help me learning to code
+the right way go ahead DM me through discord "tiosen".
+
+At this point, I'm just adding any feature that I want to automate through my own discord bot to run it on my private discord server xd.
+
+But to do that honestly I'm kinda lost right now so maybe it might take some time.
+
+so I just learned that you cannot run client.run(token) & bot.run(token) at the same time.
+
+Bruh idk why I keep putting @bot.even with () even though I shouldn't do it lol.
