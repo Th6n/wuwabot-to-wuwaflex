@@ -84,7 +84,6 @@ async def on_message(message):
         await message.channel.send('Hi there!')
     await bot.process_commands(message)
 
-
 @bot.command()
 async def pingping(ctx):
     await ctx.send('Pong!')
